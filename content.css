@@ -1,0 +1,268 @@
+﻿#sklight-root {
+  all: initial;
+}
+
+#sklight-root,
+#sklight-root * {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#sklight-root .is-hidden {
+  display: none !important;
+}
+
+#sklight-root .sklight-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2147483000;
+}
+
+#sklight-root .sklight-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 33.333vw;
+  min-width: 360px;
+  max-width: 640px;
+  height: 100vh;
+  overflow: auto;
+  background: #14181d;
+  color: #e6ebf2;
+  border-left: 1px solid #2a313b;
+  z-index: 2147483001;
+  padding: 16px;
+}
+
+#sklight-root .sklight-launcher {
+  position: fixed;
+  right: 14px;
+  top: 14px;
+  z-index: 2147483002;
+  background: #11161c;
+  color: #e6ebf2;
+  border: 1px solid #2a313b;
+  border-radius: 10px;
+  padding: 9px 12px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+#sklight-root .sklight-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+#sklight-root .sklight-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #f3f6fa;
+}
+
+#sklight-root .sklight-header p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #aab4c2;
+}
+
+#sklight-root .sklight-close {
+  background: transparent;
+  color: #cdd6e2;
+  border: 1px solid #2a313b;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+#sklight-root label {
+  display: block;
+  margin: 10px 0 6px;
+  color: #aab4c2;
+  font-size: 12px;
+}
+
+#sklight-root select,
+#sklight-root input,
+#sklight-root .sklight-check,
+#sklight-root .sklight-add-custom,
+#sklight-root .sklight-find-custom {
+  width: 100%;
+  border: 1px solid #2a313b;
+  border-radius: 10px;
+  background: #0f1318;
+  color: #e6ebf2;
+  padding: 10px;
+  font-size: 14px;
+}
+
+#sklight-root input,
+#sklight-root select,
+#sklight-root button {
+  pointer-events: auto !important;
+}
+
+#sklight-root input {
+  caret-color: #e6ebf2;
+  cursor: text;
+  user-select: text !important;
+  -webkit-user-select: text !important;
+}
+
+#sklight-root .sklight-check,
+#sklight-root .sklight-add-custom,
+#sklight-root .sklight-find-custom {
+  margin-top: 12px;
+  cursor: pointer;
+  background: #1d2733;
+}
+
+#sklight-root .sklight-check:hover,
+#sklight-root .sklight-add-custom:hover,
+#sklight-root .sklight-find-custom:hover {
+  background: #243142;
+}
+
+#sklight-root .sklight-custom {
+  margin-top: 12px;
+  border: 1px solid #2a313b;
+  border-radius: 12px;
+  padding: 10px;
+  background: #10151b;
+}
+
+#sklight-root .sklight-custom h3 {
+  margin: 0;
+  color: #e6ebf2;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#sklight-root .sklight-custom-help {
+  margin: 5px 0 2px;
+  color: #aab4c2;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+#sklight-root .sklight-custom-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 8px;
+}
+
+#sklight-root .sklight-find-custom {
+  margin-top: 8px;
+}
+
+#sklight-root .sklight-custom-status {
+  min-height: 18px;
+  margin: 8px 0 0;
+  color: #9ad4aa;
+  font-size: 12px;
+}
+
+#sklight-root .sklight-custom-status.is-error {
+  color: #f4b1b1;
+}
+
+#sklight-root .sklight-result {
+  margin-top: 12px;
+  border: 1px solid #2a313b;
+  border-radius: 12px;
+  padding: 12px;
+  background: #0e1217;
+}
+
+#sklight-root .sklight-row {
+  margin: 6px 0;
+  line-height: 1.35;
+}
+
+#sklight-root .sklight-spots {
+  margin: 4px 0 8px 18px;
+  padding: 0;
+}
+
+#sklight-root .sklight-spots li {
+  margin: 2px 0;
+}
+
+#sklight-root .sklight-map {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  margin: 10px 0;
+  overflow: hidden;
+  border: 1px solid #2a313b;
+  border-radius: 10px;
+  background: #18202a;
+}
+
+#sklight-root .sklight-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+#sklight-root .sklight-map-link {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  border: 1px solid #2a313b;
+  border-radius: 8px;
+  padding: 5px 8px;
+  background: rgba(15, 19, 24, 0.9);
+  color: #e6ebf2;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+#sklight-root .sklight-status {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#sklight-root .sklight-status.ok {
+  color: #9ad4aa;
+  background: #1b2d22;
+}
+
+#sklight-root .sklight-status.warn {
+  color: #f1d59a;
+  background: #2f2718;
+}
+
+#sklight-root .sklight-status.bad {
+  color: #f4b1b1;
+  background: #321a1a;
+}
+
+#sklight-root .sklight-loading {
+  color: #aab4c2;
+}
+
+#sklight-root .sklight-error {
+  color: #f4b1b1;
+}
+
+@media (max-width: 1100px) {
+  #sklight-root .sklight-panel {
+    width: min(92vw, 560px);
+    min-width: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  #sklight-root .sklight-custom-grid {
+    grid-template-columns: 1fr;
+  }
+}

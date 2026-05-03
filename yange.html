@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Yange</title>
+  <link rel="stylesheet" href="content.css" />
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #0d1117;
+    }
+
+    #sklight-root .sklight-launcher,
+    #sklight-root .sklight-overlay,
+    #sklight-root .sklight-close {
+      display: none !important;
+    }
+
+    #sklight-root .sklight-panel {
+      left: 0;
+      right: 0;
+      width: min(720px, 100vw);
+      max-width: none;
+      min-width: 0;
+      margin: 0 auto;
+      border-left: 0;
+      border-right: 1px solid #2a313b;
+      border-left: 1px solid #2a313b;
+    }
+  </style>
+</head>
+<body>
+  <script src="content.js"></script>
+</body>
+</html>

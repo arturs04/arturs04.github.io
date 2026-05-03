@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Yange",
+  "description": "Najde golden hour, blue hour, vychod a zapad slnka pre fotolokacie a vlastne miesta.",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "Yange",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://api.sunrise-sunset.org/*",
+    "https://api.open-meteo.com/*",
+    "https://overpass-api.de/*",
+    "https://www.openstreetmap.org/*",
+    "https://nominatim.openstreetmap.org/*"
+  ]
+}
